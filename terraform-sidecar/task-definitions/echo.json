@@ -4,15 +4,6 @@
     "cpu": 128,
     "image":  "958322632608.dkr.ecr.us-west-2.amazonaws.com/jiffapp:v1",
     "memory": 512,
-    "name": "echoserver",
-	"logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/echoserver",
-          "awslogs-region": "us-west-2",
-          "awslogs-stream-prefix": "ecs"
-        }
-     },
     "networkMode": "awsvpc",
     "entryPoint": [
                 "/usr/bin/java",
