@@ -1,0 +1,11 @@
+FROM anapsix/alpine-java:8_server-jre_unlimited
+
+RUN ln -s /opt/jdk/bin/java /usr/bin/java
+
+# copy all the dependencies
+COPY helloworld.war      /opt/service/
+# add your skinny jar in separate step
+
+
+CMD /usr/bin/java \
+    -jar /opt/service/helloworld.war

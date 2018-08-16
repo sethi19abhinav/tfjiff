@@ -60,7 +60,7 @@ EOF
 resource "aws_iam_instance_profile" "ecs-instance-profile" {
     name = "ecs-instance-profile"
     path = "/"
-    roles = ["${aws_iam_role.ecs-instance-role.id}"]
+    role = "${aws_iam_role.ecs-instance-role.id}"
     provisioner "local-exec" {
       command = "sleep 10"
     }
