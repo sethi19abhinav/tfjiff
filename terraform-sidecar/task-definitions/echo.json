@@ -4,6 +4,7 @@
     "cpu": 128,
     "image":  "779451880258.dkr.ecr.us-west-2.amazonaws.com/jiffapp:v1",
     "memory": 512,
+    "name": "echoserver",
     "networkMode": "awsvpc",
     "entryPoint": [
                 "/usr/bin/java",
