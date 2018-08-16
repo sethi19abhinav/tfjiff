@@ -5,7 +5,6 @@ resource "aws_alb" "echoserverWebNLB" {
   name             = "echoserverWebNLB"
   subnets          = ["${aws_subnet.echoserverPubSubnet.id}"]
   internal         = true
-  security_groups  = ["${aws_security_group.echoserverLBSG.id}"]
   load_balancer_type = "network"
 }
 
