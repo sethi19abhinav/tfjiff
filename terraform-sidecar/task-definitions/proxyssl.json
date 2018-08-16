@@ -1,0 +1,21 @@
+[
+   {
+     "executionRoleArn": "arn:aws:iam::958322632608:role/ecsTaskExecutionRole",
+     "essential" : true,
+     "name": "proxyssl",
+     "image": "958322632608.dkr.ecr.us-west-2.amazonaws.com/proxy:vSSL",
+     "cpu": 256,
+     "memory": 512,
+     "networkMode": "awsvpc",
+      "entryPoint":  [
+        "/usr/local/sbin/haproxy" ,
+        "-f",
+        "/usr/local/etc/haproxy/haproxy.cfg"
+     ],
+     "portMappings": [
+        {
+          "containerPort": 443
+        }
+  ]
+  }
+]
